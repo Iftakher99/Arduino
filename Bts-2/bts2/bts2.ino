@@ -1,7 +1,7 @@
-const int IN1 = 4; //left BTS RPWM  
-const int IN2 = 5; //LEFT BTS LPWM
-const int IN3 = 6; //RIGHT BTS RPWM
-const int IN4 = 7; //RIGHT BTS LPWM
+const int IN1 = 9; //left BTS RPWM  
+const int IN2 = 9; //LEFT BTS LPWM
+const int IN3 = 5; //RIGHT BTS RPWM
+const int IN4 = 6; //RIGHT BTS LPWM
 const int ENA = 3; //LEFT BTS , RIGHT BTS R_EN , L_EN
 
 char t;
@@ -35,9 +35,9 @@ void loop() {
 }
 if(t == 'B'){      
   digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
+  digitalWrite(IN2,LOW);
   digitalWrite(IN3, HIGH);
-  digitalWrite(IN4, LOW);
+  digitalWrite(IN4,LOW );
  
   
 } 
@@ -174,6 +174,13 @@ else if(t == 'L'){
     else if(t == 'q'){     
  analogWrite(ENA, 255);
   
+  
+} 
+if(t == 'x'){      
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4,LOW);
+ 
+ 
   
 } 
  
